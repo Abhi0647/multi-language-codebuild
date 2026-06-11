@@ -8,20 +8,15 @@ phases:
 
   build:
     commands:
-      - echo "Current Directory"
-      - pwd
-
-      - echo "Files in Repository"
-      - ls -R
-
-      - echo "Python Version"
-      - python --version
-
       - echo "Running Python Program"
-      - python python/numbers.py
+      - python numbers.py
 
-      - echo "Compiling Java"
-      - javac java/Main.java
+      - echo "Compiling Java Program"
+      - javac main.java
 
-      - echo "Running Java"
-      - java -cp java Main
+      - echo "Running Java Program"
+      - java Main
+
+artifacts:
+  files:
+    - '**/*'
