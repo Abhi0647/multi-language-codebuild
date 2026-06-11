@@ -18,7 +18,7 @@ phases:
       - python --version
 
       - echo "Running Python Program"
-      - python python/numbers.py
+      - python python/number.py
 
       - echo "Compiling Java"
       - javac java/Main.java
