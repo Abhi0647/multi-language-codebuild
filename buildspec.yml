@@ -1,13 +1,22 @@
-build:
-  commands:
-    - echo "Files in repository"
-    - ls -l
+version: 0.2
 
-    - echo "Running Python Program"
-    - python numbers.py
+phases:
+  install:
+    runtime-versions:
+      python: 3.11
+      java: corretto17
 
-    - echo "Compiling Java Program"
-    - javac Main.java
+  build:
+    commands:
+      - echo "Files in repository"
+      - ls -l
+      - echo "Running Python Program"
+      - python numbers.py
+      - echo "Compiling Java Program"
+      - javac Main.java
+      - echo "Running Java Program"
+      - java Main
 
-    - echo "Running Java Program"
-    - java Main
+artifacts:
+  files:
+    - '**/*'
