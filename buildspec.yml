@@ -1,22 +1,10 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      python: 3.11
-      java: corretto17
-
   build:
     commands:
-      - echo "Files in repository"
-      - ls -l
-      - echo "Running Python Program"
-      - python numbers.py
-      - echo "Compiling Java Program"
-      - javac Main.java
-      - echo "Running Java Program"
-      - java Main
+      - zip lambda.zip lambda_function.py
 
 artifacts:
   files:
-    - '**/*'
+    - lambda.zip
