@@ -3,6 +3,7 @@ version: 0.2
 phases:
   build:
     commands:
+      - echo "Creating Lambda package"
       - zip lambda.zip lambda_function.py
 
 artifacts:
